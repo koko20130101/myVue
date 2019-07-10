@@ -1,0 +1,357 @@
+{
+  "status": 200,
+  "msg": "OK",
+  "data": {
+    "menuList": [
+      {
+        "id": 49,
+        "title": "拓店者",
+        "icon": "ios-people",
+        "routerName": "1",
+        "children": [
+          {
+            "id": 179,
+            "title": "拓店者管理",
+            "icon": "",
+            "routerName": "ReferrerList",
+            "children": []
+          },
+          {
+            "id": 180,
+            "title": "号码变更记录",
+            "icon": "",
+            "routerName": "ChannelChangeNumberHistoryList",
+            "children": []
+          },
+          {
+            "id": 181,
+            "title": "店铺变更记录",
+            "icon": "",
+            "routerName": "ChannelSea",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "title": "花生小店",
+        "icon": "ios-home",
+        "routerName": "2",
+        "children": [
+          {
+            "id": 133,
+            "title": "店铺管理",
+            "icon": "",
+            "routerName": "StoreList",
+            "children": []
+          },
+          {
+            "id": 152,
+            "title": "商户简介",
+            "icon": "",
+            "routerName": "CommercialList",
+            "children": []
+          },
+          {
+            "id": 136,
+            "title": "物料管理",
+            "icon": "",
+            "routerName": "MaterialList",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": 51,
+        "title": "订单管理",
+        "icon": "ios-paper",
+        "routerName": "OrderList",
+        "children": []
+      },
+      {
+        "id": 140,
+        "title": "客服工单",
+        "icon": "ios-happy",
+        "routerName": "CustomerSList",
+        "children": []
+      },
+      {
+        "id": 52,
+        "title": "财务管理",
+        "icon": "logo-yen",
+        "routerName": "Finance",
+        "children": [
+          {
+            "id": 63,
+            "title": "账户管理",
+            "icon": null,
+            "routerName": "FinAccount",
+            "children": []
+          },
+          {
+            "id": 64,
+            "title": "提现审批",
+            "icon": null,
+            "routerName": "WithdrawList",
+            "children": []
+          },
+          {
+            "id": 139,
+            "title": "总账查询",
+            "icon": "",
+            "routerName": "FinLedger",
+            "children": []
+          },
+          {
+            "id": 145,
+            "title": "发放记录",
+            "icon": "",
+            "routerName": "MaterialIssues",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": 53,
+        "title": "系统管理",
+        "icon": "ios-settings",
+        "routerName": "7",
+        "children": [
+          {
+            "id": 56,
+            "title": "品类管理",
+            "icon": null,
+            "routerName": "CatOne",
+            "children": []
+          },
+          {
+            "id": 57,
+            "title": "系统参数",
+            "icon": null,
+            "routerName": "SystemParmList",
+            "children": []
+          },
+          {
+            "id": 58,
+            "title": "用户管理",
+            "icon": null,
+            "routerName": "User",
+            "children": []
+          },
+          {
+            "id": 59,
+            "title": "角色管理",
+            "icon": null,
+            "routerName": "Role",
+            "children": []
+          },
+          {
+            "id": 98,
+            "title": "权限管理",
+            "icon": "",
+            "routerName": "Permission",
+            "children": []
+          },
+          {
+            "id": 134,
+            "title": "版本管理",
+            "icon": "",
+            "routerName": "Versioning",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": 61,
+        "title": "公告&消息",
+        "icon": "md-chatbubbles",
+        "routerName": "MessageList",
+        "children": []
+      },
+      {
+        "id": 62,
+        "title": "用户反馈",
+        "icon": "ios-create",
+        "routerName": "Feedback",
+        "children": []
+      },
+      {
+        "id": 76,
+        "title": "数据统计分析",
+        "icon": "md-trending-up",
+        "routerName": "Statistics",
+        "children": [
+          {
+            "id": 77,
+            "title": "单日收款提现",
+            "icon": null,
+            "routerName": "ReportProceeds",
+            "children": []
+          },
+          {
+            "id": 137,
+            "title": "运营数据统计",
+            "icon": "",
+            "routerName": "DataStatistics",
+            "children": []
+          },
+          {
+            "id": 138,
+            "title": "运营数据分析",
+            "icon": "",
+            "routerName": "DataAnalysisList",
+            "children": []
+          },
+          {
+            "id": 166,
+            "title": "产品数据分析",
+            "icon": "",
+            "routerName": "GoodsStatistics",
+            "children": []
+          },
+          {
+            "id": 174,
+            "title": "用户端埋点",
+            "icon": "",
+            "routerName": "UserClientStatistics",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": 135,
+        "title": "运营工具",
+        "icon": "ios-build",
+        "routerName": "9",
+        "children": [
+          {
+            "id": 141,
+            "title": "短信验证",
+            "icon": "",
+            "routerName": "OperatingTools",
+            "children": []
+          },
+          {
+            "id": 143,
+            "title": "活动类型",
+            "icon": "",
+            "routerName": "ActivityType",
+            "children": []
+          },
+          {
+            "id": 144,
+            "title": "活动明细",
+            "icon": "",
+            "routerName": "ActivityList",
+            "children": []
+          },
+          {
+            "id": 147,
+            "title": "商品管理",
+            "icon": "",
+            "routerName": "GoodsList",
+            "children": []
+          },
+          {
+            "id": 151,
+            "title": "商品订单",
+            "icon": "",
+            "routerName": "GoodsOrderList",
+            "children": []
+          },
+          {
+            "id": 164,
+            "title": "海报管理",
+            "icon": "",
+            "routerName": "PostersList",
+            "children": []
+          },
+          {
+            "id": 165,
+            "title": "分享域名管理",
+            "icon": "",
+            "routerName": "DomainList",
+            "children": []
+          },
+          {
+            "id": 169,
+            "title": "严选分类管理",
+            "icon": "",
+            "routerName": "YanxuanClassifyList",
+            "children": []
+          },
+          {
+            "id": 176,
+            "title": "严选首页配置",
+            "icon": "",
+            "routerName": "YanxuanHomeConfig",
+            "children": []
+          },
+          {
+            "id": 182,
+            "title": "严选优惠券",
+            "icon": "",
+            "routerName": "CouponList",
+            "children": []
+          },
+          {
+            "id": 184,
+            "title": "优惠券效果",
+            "icon": "",
+            "routerName": "CouponUseRecordsList",
+            "children": []
+          },
+          {
+            "id": 185,
+            "title": "秒杀管理",
+            "icon": "",
+            "routerName": "SeckillList",
+            "children": []
+          },
+          {
+            "id": 186,
+            "title": "售后工单",
+            "icon": "",
+            "routerName": "AfterSalesList",
+            "children": []
+          },
+          {
+            "id": 188,
+            "title": "第三方售后工单",
+            "icon": "",
+            "routerName": "ThirdpartyAfterSalesList",
+            "children": []
+          },
+          {
+            "id": 187,
+            "title": "小店首页配置",
+            "icon": "",
+            "routerName": "HomepageModulesList",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": 146,
+        "title": "合伙人管理",
+        "icon": "ios-people",
+        "routerName": "PartnersList",
+        "children": []
+      },
+      {
+        "id": 148,
+        "title": "拓店问答",
+        "icon": "md-outlet",
+        "routerName": "ChannelFAQs",
+        "children": []
+      }
+    ],
+    "index": {
+      "id": 179,
+      "title": "拓店者管理",
+      "icon": "",
+      "routerName": "ReferrerList",
+      "children": []
+    }
+  }
+}
