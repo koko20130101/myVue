@@ -6,7 +6,6 @@
 
 <script>
 import { mapGetters } from 'vuex'
-
 export default {
   name: 'App',
   data () {
@@ -16,6 +15,9 @@ export default {
     ...mapGetters('footerStatus', {
       isShow: 'isShow'
     })
+  },
+  created () {
+    //
   }
 }
 </script>

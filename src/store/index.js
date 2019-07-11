@@ -1,16 +1,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import footerStatus from './modules/footerStatus'
-import collection from './modules/collection'
+import app from './modules/app'
+import user from './modules/user'
 
 Vue.use(Vuex)
 
-const store = new Vuex.Store({
-  modules: {
-    footerStatus,
-    collection
+export default new Vuex.Store({
+  modules: { // 状态模块
+    app,
+    user
   }
 })
-
-export default store

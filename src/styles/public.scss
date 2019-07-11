@@ -8,26 +8,87 @@ $global-input: #fff #e8e8e8 #d5d5d5 14px 274px 120px #c11920; //1背影颜色 2�
 $global-progress: #e5e5e5 #5093e1 8px; //1背影底色 2进度颜色 3高度
 $global-maincolor: #5093e1;
 //有时需要用到透明层，兼容ie7
-@mixin opacity($opacity:30) { opacity: $opacity/100; filter: alpha(opacity=$opacity); }
-//经常同时使用到的高及行高，使用如@include height(30px)
-@mixin height($h:30px) { height: $h; line-height: $h; }
-//浮动清除
-@mixin clear() { display: block; content: '.'; clear: both; height: 0; line-height: 0; visibility: hidden; }
-html, body, div, span, table, tbody, tr, th, td, em, img, strong, h1, h2, h3, h4, h5, h6, p, a, dl, dd, dt, ol, ul, li, form, label, input, textarea, button, b, i, u{ margin: 0; padding: 0; list-style: none; outline: none; }
-h1, h2, h3, h4, h5, h6, b{ font-weight: 400; }
-a, img{ text-decoration: none; border: 0; }
-body{ font-family: $global-font-family; color: nth($global-color, 1); background: #f6f7f7; font-size: 14px; min-width: 1024px; }
-a{ color: nth($global-color, 2); font-size: 14px;
-  &:link{ text-decoration: none; }
-  &:visited{ text-decoration: none; color: nth($global-color, 3); }
-  &:hover{ text-decoration: none; color: nth($global-color, 4); }
-  &:active{ text-decoration: none; color: nth($global-color, 5); }
+@mixin opacity($opacity:30) {
+  opacity: $opacity/100;
+  filter: alpha(opacity=$opacity);
 }
 
-.main-nav-top{ height: 40px; line-height: 40px; overflow: visible; background: #dadadb; position: relative;
-  .right-btn{ position: absolute; right: 10px; top: 0px;
-    a{ margin-left: 10px;
-      i{ font-size: 18px;
+//经常同时使用到的高及行高，使用如@include height(30px)
+@mixin height($h:30px) {
+  height: $h;
+  line-height: $h;
+}
+
+//浮动清除
+@mixin clear() {
+  display: block;
+  content: '.';
+  clear: both;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+
+html, body, div, span, table, tbody, tr, th, td, em, img, strong, h1, h2, h3, h4, h5, h6, p, a, dl, dd, dt, ol, ul, li, form, label, input, textarea, button, b, i, u {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, b {
+  font-weight: 400;
+}
+
+a, img {
+  text-decoration: none;
+  border: 0;
+}
+html,body{
+  width:100%;
+  height:100%;
+}
+body {
+  font-family: $global-font-family;
+  color: nth($global-color, 1);
+  background: #f6f7f7;
+  font-size: 14px;
+}
+
+a {
+  color: nth($global-color, 2);
+  font-size: 14px;
+  &:link {
+    text-decoration: none;
+  }
+  &:visited {
+    text-decoration: none;
+    color: nth($global-color, 3);
+  }
+  &:hover {
+    text-decoration: none;
+    color: nth($global-color, 4);
+  }
+  &:active {
+    text-decoration: none;
+    color: nth($global-color, 5);
+  }
+}
+
+.main-nav-top {
+  height: 40px;
+  line-height: 40px;
+  overflow: visible;
+  background: #dadadb;
+  position: relative;
+  .right-btn {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    a {
+      margin-left: 10px;
+      i {
+        font-size: 18px;
         vertical-align: middle;
         margin-right: 3px;
       }
