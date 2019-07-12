@@ -1,5 +1,5 @@
 import axios from 'axios'
-// import store from '../store/index'
+import store from '../store/index'
 
 import {
   RES_SUC_CODE,
@@ -32,7 +32,7 @@ switch (ENV) {
 axios.interceptors.request.use(
   config => {
     // 权限认证
-    // config.header.Authorization = store.state.app.token
+    config.headers.Authorization = store.state.app.token
     // post传参序列化
     if (config.method !== 'post') {
       config.data = JSON.stringify(config.data)

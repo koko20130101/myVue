@@ -3,7 +3,7 @@
     <div class="logo">
       <img src="../../assets/logo.png" alt="">
     </div>
-    <el-menu default-active="1-4-1" @open="handleOpen" @close="handleClose" :collapse="collapse">
+    <el-menu :default-active="onRoute" @select="selectMenu" :collapse="collapse">
       <template v-for="item in menuList">
         <el-submenu v-if="item.children && item.children.length  > 0" :key="item.routerName" :index="item.routerName">
           <template slot="title">
@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'SideBar',
   props: {
@@ -38,8 +39,8 @@ export default {
   },
   data () {
     return {
-      isCollapse: false,
-      menuList: [
+      isCollapse: false
+      /* menuList: [
         {
           'id': 49,
           'title': '拓店者',
@@ -390,15 +391,23 @@ export default {
           'routerName': 'ChannelFAQs',
           'children': []
         }
-      ]
+      ] */
+    }
+  },
+  computed: {
+    ...mapState({
+      menuList: state => state.app.menuList
+    }),
+    onRoute () {
+      return this.$route.name
     }
   },
   methods: {
-    handleOpen (key, keyPath) {
-      console.log(key, keyPath)
-    },
-    handleClose (key, keyPath) {
-      console.log(key, keyPath)
+    selectMenu (routerName, indexPath) {
+      // this.$emit('change-router')
+      this.$router.push({
+        name: routerName
+      })
     }
   }
 }

@@ -1,18 +1,20 @@
 <template>
-  <div class="login-main">
-    <div class="box">
-      <el-form ref="form" label-position="left" :rules="rules" :model="loginInfo" label-width="80px">
-        <el-form-item label="用户名：" prop="username">
-          <el-input placeholder="请输入用户名" v-model="loginInfo.username" clearable></el-input>
-        </el-form-item>
-        <el-form-item label="密码：" prop="pwd">
-          <el-input placeholder="请输入密码" v-model="loginInfo.pwd" show-password clearable></el-input>
-        </el-form-item>
-        <el-form-item>
-          <el-button type="primary" @click="submitForm('form')">登 录</el-button>
-          <el-button @click="resetForm('form')">重 置</el-button>
-        </el-form-item>
-      </el-form>
+  <div class="login-container">
+    <div class="login-main">
+      <div class="box">
+        <el-form ref="form" label-position="left" :rules="rules" :model="loginInfo" label-width="80px">
+          <el-form-item label="用户名：" prop="username">
+            <el-input placeholder="请输入用户名" v-model="loginInfo.username" clearable></el-input>
+          </el-form-item>
+          <el-form-item label="密码：" prop="pwd">
+            <el-input placeholder="请输入密码" v-model="loginInfo.pwd" show-password clearable></el-input>
+          </el-form-item>
+          <el-form-item>
+            <el-button type="primary" @click="submitForm('form')">登 录</el-button>
+            <el-button @click="resetForm('form')">重 置</el-button>
+          </el-form-item>
+        </el-form>
+      </div>
     </div>
   </div>
 </template>
@@ -61,8 +63,16 @@ export default {
             pwd: MD5(this.loginInfo.pwd).toString()
           })
           // 等待获取左侧导航和用户资源访问权限
-          await Promise.all([this.$store.dispatch('app/fetchMenus'), this.$store.dispatch('permission/fetch')]).then(res => {
-
+          await Promise.all([this.$store.dispatch('app/fetchMenus'), this.$store.dispatch('permission/fetchResourceByUserId')]).then(res => {
+            let menusRes = res[0]
+            let { data: { data: { index: { routerName } } } } = menusRes
+            if (routerName) {
+              this.$router.push({
+                name: 'User'
+              })
+            } else {
+              //
+            }
           })
         }
       })

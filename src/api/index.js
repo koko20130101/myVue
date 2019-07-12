@@ -22,7 +22,19 @@ const api = {
   // 修改用户
   updateUser: params => axios.post('/api/manage/user/updateUser', params),
   // 修改密码
-  modifyUserPwd: params => axios.post('/api/manage/user/modifyPwd', params)
+  modifyUserPwd: params => axios.post('/api/manage/user/modifyPwd', params),
+
+  /* ---------- 资源模块 ---------- */
+  // 新增资源
+  addResource: params => axios.post('/api/manage/auth/addResource', params),
+  // 删除资源
+  delResource: params => axios.post('/api/manage/auth/delResource', params),
+  // 获取用户所有权限
+  getResourceByUserId: params => axios.post('/api/manage/auth/findResourceByUserId', params),
+  // 资源列表
+  getRoleResource: params => axios.post('/api/manage/auth/getRoleResource', params),
+  // 编辑资源
+  updateResource: params => axios.post('/api/manage/auth/updateResource', params)
 }
 
 export {api}

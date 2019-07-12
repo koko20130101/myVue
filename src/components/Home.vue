@@ -31,9 +31,7 @@ export default {
   },
   data () {
     return {
-      collapse: false,
-      input2: '',
-      select: ''
+      collapse: false
     }
   },
   methods: {
@@ -42,9 +40,7 @@ export default {
     }
   },
   created () {
-    this.$router.push({
-      name: 'User'
-    })
+
   }
 }
 </script>

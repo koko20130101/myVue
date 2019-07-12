@@ -9,7 +9,7 @@ const state = {
 
 const getters = {
   isLogin (state, getters, rootState) {
-    return state.token !== '' && rootState.user.infos.userName !== void 0
+    return state.token !== '' && rootState.user.info.userName !== void 0
   }
 }
 
@@ -37,7 +37,7 @@ const actions = {
       // void其实是javascript中的一个函数，接受一个参数，返回值永远是undefined
       // 重命名userId
       if (userInfo.id && userInfo.userId === void 0) {
-        userInfo.userid = userInfo.id
+        userInfo.userId = userInfo.id
       }
       // 设置状态中的token
       commit('setToken', token)
