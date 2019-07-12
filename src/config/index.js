@@ -27,3 +27,6 @@ export const RES_FAIL_LOGIN_CODE = 10005 // 请求返回登录密码错误状态
 
 /* 请求 */
 export const REQ_RETRY_TIME = 2000 // 请求失败重试时长 ms
+
+/* AES 秘钥 */
+export const AES_SECRET_KEY = 'FCKUPKDHVE3CPLQ9'

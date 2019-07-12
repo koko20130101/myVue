@@ -35,12 +35,15 @@ export default {
     }
   },
   methods: {
+    aliveHandle () {
+      console.log(this.$route)
+    },
     changeCollapse () {
       this.collapse = !this.collapse
     }
   },
   created () {
-
+    this.aliveHandle()
   }
 }
 </script>

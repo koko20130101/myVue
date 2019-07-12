@@ -68,7 +68,7 @@ export default {
             let { data: { data: { index: { routerName } } } } = menusRes
             if (routerName) {
               this.$router.push({
-                name: 'User'
+                name: routerName
               })
             } else {
               //

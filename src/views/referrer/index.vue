@@ -3,9 +3,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'ReferrerList'
-  }
+export default {
+  name: 'ReferrerList'
+}
 </script>
 
 <style scoped>

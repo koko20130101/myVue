@@ -10,6 +10,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 Vue.config.productionTip = false
 Vue.prototype.$ELEMENT = {size: 'large', zIndex: 3000}
 Vue.use(ElementUI)
+// 重设数据
+store.dispatch('app/restoreData')
 
 /* eslint-disable no-new */
 new Vue({

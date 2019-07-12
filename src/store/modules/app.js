@@ -1,4 +1,5 @@
 import {api} from '@/api'
+import utils from '@/utils'
 import {REQ_RETRY_TIME} from '@/config'
 
 const state = {
@@ -9,6 +10,7 @@ const state = {
 
 const getters = {
   isLogin (state, getters, rootState) {
+    console.log(rootState.user)
     return state.token !== '' && rootState.user.info.userName !== void 0
   }
 }
@@ -16,6 +18,8 @@ const getters = {
 const mutations = {
   setToken (state, token) {
     state.token = token
+    // 存到本地
+    utils.storage.set('token', token, {secure: false})
   },
   // 登录后默认页
   updateIndex (state, firstPage) {
@@ -72,9 +76,26 @@ const actions = {
       }())
     })
   },
-  // 从本地存储中获取左侧导航
+  // 重设默认页
+  restoreIndex ({ commit }) {
+    try {
+      const menuList = utils.storage.get('index_nav')
+      if (menuList) commit('updateIndex', menuList)
+    } catch (error) {}
+  },
+  // 重设左侧导航
   restoreMenuList ({commit}) {
-
+    // 从本地存储中获取左侧导航
+  },
+  restoreData ({commit, dispatch}) {
+    // 从本地存储中获取token
+    let token = utils.storage.get('token', { secure: false })
+    if (token) {
+      commit('setToken', token)
+      dispatch('user/restoreInfo', {}, { root: true })
+      dispatch('restoreMenuList')
+      dispatch('restoreIndex')
+    }
   }
 }
 

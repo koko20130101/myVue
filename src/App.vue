@@ -17,7 +17,11 @@ export default {
     })
   },
   created () {
-    //
+    // 进入入口时判断是否登录
+    if (this.$store.getters['app/isLogin']) {
+      this.$store.dispatch('app/fetchMenus')
+      this.$store.dispatch('permission/fetchResourceByUserId')
+    }
   }
 }
 </script>
