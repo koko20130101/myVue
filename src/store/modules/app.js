@@ -53,10 +53,11 @@ const actions = {
   // 登出
   async logout () {
     try {
-      //
-    } catch (error) {
-      //
-    }
+      await api.doLoginOut()
+    } catch (error) {}
+    // 清除本地存储
+    utils.storage.clear()
+    window.location = '/login'
   },
   // 获取左侧导航
   fetchMenus ({commit}) {
