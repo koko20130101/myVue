@@ -5,7 +5,7 @@ export default [ // 配置路由，这里是个数组
     name: 'Home', // 路由名称
     redirect: to => { // 重定向
       return {
-        name: 'ReferrerList'
+        name: 'User'
       }
     },
     component: () => import(/* webpackChunkName: "home" */ '@/components/Home/'), // 对应的组件模板
@@ -16,15 +16,6 @@ export default [ // 配置路由，这里是个数组
     // 子路由
     children: [
       {
-        path: 'system/user',
-        name: 'User',
-        meta: {
-          requireAuth: true,
-          keepAlive: true
-        },
-        component: () => import(/* webpackChunkName: "user" */'@/views/user/')
-      },
-      {
         path: 'referrer/list',
         name: 'ReferrerList',
         meta: {
@@ -34,13 +25,31 @@ export default [ // 配置路由，这里是个数组
         component: () => import(/* webpackChunkName: "referrerList" */'@/views/referrer/')
       },
       {
-        path: 'channel/number_history/list',
-        name: 'ChannelChangeNumberHistoryList',
+        path: 'account/user/list',
+        name: 'User',
         meta: {
           requireAuth: true,
           keepAlive: true
         },
-        component: () => import(/* webpackChunkName: "channelChangeNumberHistoryList" */'@/views/test/')
+        component: () => import(/* webpackChunkName: "user" */'@/views/account/UserList')
+      },
+      {
+        path: 'account/role/list',
+        name: 'RoleList',
+        meta: {
+          requireAuth: true,
+          keepAlive: true
+        },
+        component: () => import(/* webpackChunkName: "roleList" */'@/views/account/RoleList')
+      },
+      {
+        path: 'account/resource/list',
+        name: 'ResourceList',
+        meta: {
+          requireAuth: true,
+          keepAlive: true
+        },
+        component: () => import(/* webpackChunkName: "resourceList" */'@/views/account/ResourceList')
       }
     ]
   },

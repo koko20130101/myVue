@@ -69,6 +69,7 @@ export default {
 
   .side-bar {
     background: #fff;
+    border-right:1px solid #e6e6e6
   }
 
   .side-bar::-webkit-scrollbar {
